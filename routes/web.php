@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\GameController;
 use App\Http\Controllers\CatalogController;
 use App\Http\Controllers\PageController;
 use Illuminate\Support\Facades\Route;
+
+Route::resource('games', GameController::class)->except(['show']);
 
 Route::get('/', fn () => redirect()->route('catalog.index'));
 
