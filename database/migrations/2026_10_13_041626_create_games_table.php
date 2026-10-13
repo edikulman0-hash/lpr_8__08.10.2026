@@ -16,7 +16,7 @@ return new class extends Migration
             $table->foreignId('developer_id')
                 ->constrained()
                 ->cascadeOnDelete();
-            $table->string('title', 157);
+            $table->string('title', 150);
             $table->unsignedSmallInteger('release_year');
             $table->decimal('price', 10, 2);
             $table->decimal('rating', 3, 1);
